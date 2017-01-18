@@ -22,14 +22,15 @@ function validateForm() {
 		position: relative;
 		top:250px;
 		background-color: white;
-		width: 100%;
-
+		width: 50%;
+		margin: 0 auto;
+		height: 300px;
 	}
 </style>
 </head>
 <body background="file:///C:/Users/SystemEntropy/Desktop/programs/image/images.png">
-<div style="width: 50%; text-align: center;">
 <div class="center">
+	<div style="text-align: center; margin: 0 auto;">
 	<form name="myForm" action="" onsubmit="return validateForm();" method="post">
 		Name:<input type="text" name="name"/>
 		<br>
@@ -40,9 +41,9 @@ function validateForm() {
 		Enter your Message here
 		</textarea>
 		<br>
-<input type="submit" name="submit">
-</div>
-</form>
+	<input type="submit" name="submit">
+	</form>
+	</div>
 </div>
 </body>
 </html>
