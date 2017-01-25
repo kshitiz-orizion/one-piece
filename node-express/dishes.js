@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var app=express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+console.log("inside dishes");
+
 app.all('/dishes', function(req,res,next) {
       res.writeHead(200, { 'Content-Type': 'text/plain' });
       next();
@@ -35,4 +37,5 @@ app.put('/dishes/:dishId', function(req, res, next){
 app.delete('/dishes/:dishId', function(req, res, next){
         res.end('Deleting dish: ' + req.params.dishId);
 });
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
+module.exports=app;
